@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shree Ram Food Delivery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff9f5;
+    }
+    /* Custom scrollbar for menu */
+    .menu-scroll::-webkit-scrollbar {
+      width: 8px;
+    }
+    .menu-scroll::-webkit-scrollbar-thumb {
+      background-color: #f97316;
+      border-radius: 10px;
+    }
+    .menu-scroll {
+      scrollbar-width: thin;
+      scrollbar-color: #f97316 transparent;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50">
+
+  <header class="bg-amber-600 p-6 shadow-md flex justify-between items-center">
+    <div class="text-white text-3xl font-extrabold tracking-wide select-none">
+      Shree Ram Food Delivery
+    </div>
+    <nav class="space-x-6 text-white hidden md:flex font-semibold">
+      <a href="#menu" class="hover:text-yellow-300 transition">Menu</a>
+      <a href="#about" class="hover:text-yellow-300 transition">About</a>
+      <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+    </nav>
+    <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </header>
+
+  <nav id="mobile-menu" class="bg-amber-600 text-white hidden flex-col items-center space-y-4 py-4 md:hidden">
+    <a href="#menu" class="block text-lg font-semibold hover:text-yellow-300 transition">Menu</a>
+    <a href="#about" class="block text-lg font-semibold hover:text-yellow-300 transition">About</a>
+    <a href="#contact" class="block text-lg font-semibold hover:text-yellow-300 transition">Contact</a>
+  </nav>
+
+  <main class="flex-grow container mx-auto px-4 py-8">
+
+    <section class="text-center max-w-4xl mx-auto mb-12">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-orange-700 mb-4">Delicious Food, Delivered Fast</h1>
+      <p class="text-lg md:text-xl text-orange-900/90 max-w-3xl mx-auto">
+        Enjoy traditional and tasty dishes from Shree Ram's kitchen right at your doorstep.
+        Choose from various thalis, parathas, pav bhaji, and refreshing beverages.
+      </p>
+      <div class="mt-8">
+        <img 
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b568a82c-f05b-438f-920a-9a3bc9f6f494.png" 
+          alt="Delicious Indian food delivery spread with vibrant colors, including thali, paratha, pav bhaji, and beverages, laid out on a traditional wooden surface"
+          class="w-full rounded-lg shadow-lg object-cover max-h-96 mx-auto"
+          onerror="this.style.display='none'"
+        />
+      </div>
+    </section>
+    
+    <section id="menu" class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-6">
+      <h2 class="text-3xl font-bold mb-6 text-amber-700 border-b-4 border-amber-400 w-fit pb-2">Menu</h2>
+      <div class="grid md:grid-cols-3 gap-12 menu-scroll max-h-[650px] overflow-y-auto px-4">
+
+        <!-- AMUL PAV BHAJI -->
+        <div>
+          <h3 class="text-xl font-semibold text-orange-600 border-b border-orange-300 mb-3">Amul Pav Bhaji</h3>
+          <ul class="space-y-1 text-gray-800 font-semibold">
+            <li class="flex justify-between"><span>Pav Bhaaji</span> <span>₹100</span></li>
+            <li class="flex justify-between"><span>Cheese Pav Bhaaji</span> <span>₹120</span></li>
+            <li class="flex justify-between"><span>Butter Pav Jodi</span> <span>₹20</span></li>
+          </ul>
+        </div>
+
+        <!-- PARATHA HOUSE -->
+        <div>
+          <h3 class="text-xl font-semibold text-orange-600 border-b border-orange-300 mb-3">Paratha House</h3>
+          <ul class="space-y-1 text-gray-800 font-semibold">
+            <li class="flex justify-between"><span>Aloo Paratha</span> <span>₹60</span></li>
+            <li class="flex justify-between"><span>Aloo Cheese Paratha</span> <span>₹80</span></li>
+            <li class="flex justify-between"><span>Paneer Paratha</span> <span>₹90</span></li>
+            <li class="flex justify-between"><span>Paneer Cheese Paratha</span> <span>₹110</span></li>
+            <li class="flex justify-between"><span>Cheese Paratha</span> <span>₹110</span></li>
+            <li class="flex justify-between"><span>Mix Veg Paratha</span> <span>₹70</span></li>
+            <li class="flex justify-between"><span>Mix Veg Cheese Paratha</span> <span>₹90</span></li>
+            <li class="flex justify-between"><span>Methi Paratha</span> <span>₹70</span></li>
+            <li class="flex justify-between"><span>Thalpith</span> <span>₹70</span></li>
+          </ul>
+        </div>
+
+        <!-- THALI -->
+        <div>
+          <h3 class="text-xl font-semibold text-orange-600 border-b border-orange-300 mb-3">Thali</h3>
+          <ul class="space-y-1 text-gray-800 font-semibold">
+            <li class="flex justify-between"><span>Rice Plate</span> <span>₹120</span></li>
+            <li class="flex justify-between"><span>Special Rice Plate</span> <span>₹199</span></li>
+            <li class="flex justify-between"><span>Maswadi</span> <span>₹249</span></li>
+            <li class="flex justify-between"><span>Dalbhati</span> <span>₹160</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Cold beverages under menu -->
+      <div class="mt-10 max-w-md mx-auto border-t border-amber-300 pt-6">
+        <h3 class="text-xl font-semibold text-orange-600 mb-3">Cold Beverages</h3>
+        <ul class="space-y-1 text-gray-800 font-semibold">
+          <li class="flex justify-between"><span>Masala Tak</span> <span>₹20</span></li>
+          <li class="flex justify-between"><span>Lassi</span> <span>₹40</span></li>
+          <li class="flex justify-between"><span>Solkadhi</span> <span>₹30</span></li>
+          <li class="flex justify-between"><span>Matha</span> <span>₹20</span></li>
+          <li class="flex justify-between"><span>Cold Coffee</span> <span>₹50</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="breakfast" class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6 mt-16">
+      <h2 class="text-3xl font-bold mb-6 text-amber-700 border-b-4 border-amber-400 w-fit pb-2">Breakfast Menu</h2>
+      <ul class="space-y-4 text-gray-900 font-semibold text-lg">
+        <li>Poha / Upma</li>
+        <li>Sheera</li>
+        <li>Tea</li>
+        <li>Idli Sambar</li>
+        <li>Medu Vada Sambar</li>
+        <li>Vada Pav</li>
+        <li>Misal Pav</li>
+        <li>Mini Masala Dosa</li>
+        <li>Mini Uttappam</li>
+      </ul>
+      <p class="mt-6 font-semibold text-amber-800">Breakfast Timing: 7:30 AM to 11:30 PM</p>
+    </section>
+
+    <section id="about" class="max-w-4xl mx-auto mt-20 mb-12 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-amber-700">About Shree Ram Food Delivery</h2>
+      <p class="text-gray-800 max-w-3xl mx-auto text-lg">
+        Shree Ram Food Delivery offers authentic, home-style Maharashtrian and Indian delicacies made fresh daily.
+        We cater to your cravings with unlimited items in some platters and quick delivery right to your doorstep.
+        Our goal is to bring satisfying, wholesome meals with traditional flavors to your table fast and fresh.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="bg-amber-600 text-white p-6 text-center font-semibold">
+    <p>
+      Order for more delicious food! Delivery time is approximately 10-15 minutes.
+    </p>
+    <p class="mt-2 text-sm">
+      © 2024 Shree Ram Food Delivery. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
+
